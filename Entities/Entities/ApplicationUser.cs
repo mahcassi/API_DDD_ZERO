@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entities.Enums;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace Entities.Entities
 {
@@ -11,6 +8,6 @@ namespace Entities.Entities
     {
         public int Age { get; set; }
         public string Cellphone { get; set; }
-        public int UserType { get; set; }
+        public EUserType UserType { get; set; }
     }
 }
