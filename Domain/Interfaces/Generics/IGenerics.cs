@@ -9,10 +9,10 @@ namespace Domain.Interfaces.Generics
     public interface IGenerics<T> where T : class
     {
 
-        Task Create(T obj);
-        Task<T> Update(T obj);
-        Task<T> Delete(T obj);
-        Task<T> FindbyId(int id);
+        Task Create(T Obj);
+        Task Update(T Obj);
+        Task Delete(T Obj);
+        Task<T> FindbyId(int Id);
         Task<List<T>> List();
     }
 }
