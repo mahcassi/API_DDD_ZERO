@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    internal class News
+    public class News
     {
         public int Id { get; set; }
         public string Title { get; set; }
