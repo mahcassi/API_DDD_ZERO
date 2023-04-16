@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infra.Repositories.Generics
 {
-    internal class GenericRepository<T> : IGenerics<T>, IDisposable where T : class
+    public class GenericRepository<T> : IGenerics<T>, IDisposable where T : class
     {
         private readonly DbContextOptions<Context> _OptionsBuilder;
 
