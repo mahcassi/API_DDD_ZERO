@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Notify
+namespace Entities.Entities
 {
     public class Notify
     {
