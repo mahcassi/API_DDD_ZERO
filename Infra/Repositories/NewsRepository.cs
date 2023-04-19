@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infra.Repositories
 {
-    internal class NewsRepository : GenericRepository<News>, INews
+    public class NewsRepository : GenericRepository<News>, INews
     {
         private readonly DbContextOptions<Context> _OptionsBuilder;
         public NewsRepository()

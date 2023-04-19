@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    internal interface INewsApplication : IGenericsApplication<News>
+    public interface INewsApplication : IGenericsApplication<News>
     {
         Task CreateNews(News news);
         Task UpdateNews(News news);

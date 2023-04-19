@@ -11,5 +11,6 @@ namespace Application.Interfaces
     public interface IUserApplication 
     {
         Task<bool> CreateUser(string email, string password, int age, string cellphone);
+        Task<bool> ExistUser(string email, string password);
     }
 }

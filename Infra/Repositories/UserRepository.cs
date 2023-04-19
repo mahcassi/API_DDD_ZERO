@@ -44,5 +44,22 @@ namespace Infra.Repositories
 
             return true;
         }
+
+        public async Task<bool> ExistUser(string email, string password)
+        {
+            try
+            {
+                using(var data = new Context(_OptionsBuilder))
+                {
+                    return await data.ApplicationUser
+                        .Where(u => u.Email.Equals(email) && u.PasswordHash.Equals(password))
+                        .AsNoTracking()
+                        .AnyAsync();
+                }
+            }   catch(Exception)
+            {
+                return false;
+            }
+        }
     }
 }
