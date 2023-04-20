@@ -26,6 +26,7 @@ namespace Infra.Configs
         {
             if (!optionsBuilder.IsConfigured)
             {
+                optionsBuilder.UseSqlServer(GetStringConnection());
                 base.OnConfiguring(optionsBuilder);
             }
         }

@@ -43,7 +43,7 @@ namespace WebAPI
             builder.Services.AddSingleton<INewsServices, NewsServices>();
 
             builder.Services.AddSingleton<INewsApplication, NewsApplication>();
-            builder.Services.AddSingleton<IUserApplication, IUserApplication>();
+            builder.Services.AddSingleton<IUserApplication, UserApplication>();
 
             var app = builder.Build();
 
