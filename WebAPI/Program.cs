@@ -27,7 +27,7 @@ namespace WebAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddCors();
             builder.Services.AddEntityFrameworkSqlServer()
                 .AddDbContext<Context>(
                    options =>
@@ -79,6 +79,9 @@ namespace WebAPI
             });
 
             var app = builder.Build();
+            var urlClient= "https://dominiodocliente.com.br";
+
+            app.UseCors(b => b.WithOrigins(urlClient));
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
