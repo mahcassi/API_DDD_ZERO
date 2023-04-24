@@ -63,5 +63,23 @@ namespace Infra.Repositories
                 return false;
             }
         }
+
+        public async Task<string> ReturnUserId(string email)
+        {
+            try
+            {
+                using (var data = new Context(_OptionsBuilder))
+                {
+                    var user = await data.ApplicationUser
+                        .Where(u => u.Email.Equals(email))
+                        .AsNoTracking()
+                        .FirstOrDefaultAsync();
+                    return user.Id;
+                }
+            } catch(Exception)
+            {
+                return string.Empty;
+            }
+        }
     }
 }

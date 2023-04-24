@@ -13,5 +13,7 @@ namespace Domain.Interfaces
         Task<bool> CreateUser(string email, string password, int age, string cellphone);
 
         Task<bool> ExistUser(string email, string password);
+
+        Task<string> ReturnUserId(string email);
     }
 }
